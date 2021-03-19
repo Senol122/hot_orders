@@ -1,0 +1,10 @@
+export const ADD_ORDER = 'ADD_ORDER';
+export const FILTER_ORDERS = 'FILTER_ORDERS';
+export const CLEAR_ORDERS = 'CLEAR_ORDERS';
+export const EDIT_ORDER = 'EDIT_ORDER';
+export const EDIT_STATE = 'EDIT_STATE';
+export const CLEAR_EDIT_STATE = 'CLEAR_EDIT_STATE';
+export const SET_CURRENT_ORDER = 'SET_CURRENT_ORDER';
+export const DELETE_ORDER = 'DELETE_ORDER';
+export const SET_ALERT = 'SET_ALERT';
+export const REMOVE_ALERT = 'REMOVE_ALERT';

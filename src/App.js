@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import { Navbar, Image, Container, Row, Col } from 'react-bootstrap';
+import logo from './assets/flame1.svg';
+import Home from './components/layout/Home';
+import Orders from './components/layout/Orders';
+import OrdersState from './context/orders/OrdersState';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <OrdersState>
+      <div className="App">
+        <Navbar expand="lg" style={{ background: '#44355C'}}>
+          <Navbar.Brand href="#" style={{fontSize: '3rem', color: 'white'}}>
+            Hot Orders
+            <Image src={logo} style={{width: '3.5rem'}} />
+          </Navbar.Brand>
+        </Navbar>
+        <Container>
+          <Row>
+            <Col>
+              <Home />
+            </Col>
+            <Col>
+              <Orders />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </OrdersState>
   );
 }
 
